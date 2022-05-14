@@ -1,0 +1,32 @@
+@import "@styles/colors";
+.headerSticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: $backgroundDarkMode-color;
+  left: 0;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
+  height: 60px;
+}
+.nav_links {
+  list-style: none;
+}
+
+.nav_links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav_links li a {
+  color: $text-primaryDark;
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+  color: $text-primaryDarkHover;
+}
