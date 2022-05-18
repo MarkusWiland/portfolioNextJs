@@ -2,7 +2,7 @@ import { Button } from "@components/index";
 import s from "./Hero.module.scss";
 export const Hero = () => {
   return (
-    <section className="section">
+    <section className={`${s.main} section`}>
       <div className={s.hero}>
         <h1>
           Jag heter <span className="linearGradient">Markus</span>
