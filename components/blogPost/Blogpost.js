@@ -8,7 +8,11 @@ export const Blogpost = ({ title, image, id, content }) => {
       <li>
         <a>
           <div className={s.imageSize}>
-            {/* <Image src={image} layout="fill" alt="text" /> */}
+            <Image
+              src={`https://viavzfdziwgbjvrkzhmz.supabase.co/storage/v1/object/public/images/${image}`}
+              layout="fill"
+              alt="text"
+            />
           </div>
           <div className={s.blogPostsInfo}>
             <Link href={`/blog/${id.toString()}`}>

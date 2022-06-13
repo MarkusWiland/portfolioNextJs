@@ -36,3 +36,18 @@
     color: $text-primaryDark;
   }
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  input {
+    padding: 0.5rem;
+    background-color: rgb(251, 251, 251);
+    border-radius: 4px;
+    border: 1px solid lightgray;
+  }
+  button {
+    padding: 1rem;
+    border: none;
+  }
+}
