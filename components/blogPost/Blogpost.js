@@ -11,7 +11,7 @@ export const Blogpost = ({ title, image, id, content }) => {
         <a>
           <div className={s.imageSize}>
             <Image
-              src={`https://viavzfdziwgbjvrkzhmz.supabase.co/storage/v1/object/public/images/${image}`}
+              src={`${process.env.NEXT_PUBLIC_SUPABASE_IMAGE}${image}`}
               layout="fill"
               alt="text"
             />
