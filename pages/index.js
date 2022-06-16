@@ -1,4 +1,3 @@
-import useSWR from "swr";
 import { Hero, Headseo, Blogpost } from "@components/index";
 import { useState } from "react";
 import s from "@styles/Main.module.scss";
