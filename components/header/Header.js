@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useAuth } from "@components/auth/Auth";
 import { useState } from "react";
 
+import { supabase } from "../../utils/supabaseClient";
 export const Header = () => {
   const { user, signOut } = useAuth();
   const [email, setEmail] = useState("");

@@ -1,25 +1,9 @@
-import {
-  Hero,
-  Headseo,
-  Blogpost,
-  Form,
-  Header,
-  Layout,
-} from "@components/index";
-import { useEffect, useState } from "react";
+import { Hero, Headseo, Blogpost, Layout } from "@components/index";
+
 import s from "@styles/Main.module.scss";
-import { createClient } from "@supabase/supabase-js";
 
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { useAuth } from "@components/auth/Auth";
-
-const supabaseAdmin = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL,
-  process.env.NEXT_PUBLIC_SUPABASE_SERVICE_ROLE_KEY
-);
-import { supabase } from "../utils/supabaseClient";
-export default function Home({ posts, session }) {
+import { supabaseAdmin } from "../utils/supabaseClient";
+export default function Home({ posts }) {
   return (
     <>
       <Layout>
@@ -42,7 +26,6 @@ export default function Home({ posts, session }) {
               </ul>
             </article>
           </section>
-          <ToastContainer />
         </main>
       </Layout>
     </>

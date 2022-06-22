@@ -1,10 +1,11 @@
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import s from "@styles/Main.module.scss";
+import { supabaseAdmin } from "../../utils/supabaseClient";
 export const Form = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = async (post) => {
-    console.log(post.file[0]);
+    console.log(post);
     try {
       await supabaseAdmin.storage
         .from("images")
@@ -31,17 +32,28 @@ export const Form = () => {
     }
   };
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className={s.form}>
-      <label>Title</label>
-      <input {...register("title", { required: true, maxLength: 20 })} />
-      <label>sub</label>
-      <input {...register("sub", { pattern: /^[A-Za-z]+$/i })} />
-      <label>content</label>
-      <input {...register("file")} type="file" />
-      <label>img</label>
-      <textarea {...register("content")} />
+    <>
+      <form onSubmit={handleSubmit(onSubmit)} className={s.form}>
+        <label>Titel</label>
+        <input
+          placeholder="Skriv en titel..."
+          {...register("title", { required: true, maxLength: 20 })}
+        />
+        <label>Välj en bild</label>
+        <input {...register("file")} type="file" name="file" />
+        <label>Skriv en sub mening</label>
+        <textarea
+          placeholder="Skriv en sub..."
+          {...register("sub", { pattern: /^[A-Za-z]+$/i })}
+        />
+        <label>Meddelande</label>
+        <textarea
+          placeholder="Skriv ett meddelande..."
+          {...register("content")}
+        />
 
-      <button type="submit">Skicka</button>
-    </form>
+        <button type="submit">Skicka</button>
+      </form>
+    </>
   );
 };
