@@ -5,3 +5,4 @@ export * from "./headSeo";
 export * from "./hero";
 export * from "./button";
 export * from "./blogPost";
+export * from "./form";

@@ -13,6 +13,7 @@ export const Blogpost = ({ title, image, id, content }) => {
             <Image
               src={`${process.env.NEXT_PUBLIC_SUPABASE_IMAGE}${image}`}
               layout="fill"
+              objectFit="cover"
               alt="text"
             />
           </div>
