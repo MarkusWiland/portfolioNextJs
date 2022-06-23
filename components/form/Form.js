@@ -3,6 +3,8 @@ import { toast } from "react-toastify";
 import s from "@styles/Main.module.scss";
 import { supabaseAdmin } from "../../utils/supabaseClient";
 export const Form = () => {
+  const { user, signOut } = useAuth();
+  console.log("user", user);
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = async (post) => {
     console.log(post);
@@ -15,6 +17,7 @@ export const Form = () => {
         {
           title: post.title,
           sub: post.sub,
+
           content: post.content,
           image: post.file[0].name,
         },
