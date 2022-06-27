@@ -1,11 +1,16 @@
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import s from "@styles/Main.module.scss";
-import { supabaseAdmin } from "../../utils/supabaseClient";
+import { supabaseAdmin, supabase } from "../../utils/supabaseClient";
+import { useAuth } from "@components/auth/Auth";
+
 export const Form = () => {
+  const { user } = useAuth();
+
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = async (post) => {
-    console.log(post);
+    console.log(user.id);
+    console.log(user.email);
     try {
       await supabaseAdmin.storage
         .from("images")
@@ -15,6 +20,8 @@ export const Form = () => {
         {
           title: post.title,
           sub: post.sub,
+          email: user.email,
+          user_id: user.id,
           content: post.content,
           image: post.file[0].name,
         },

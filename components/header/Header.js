@@ -73,7 +73,7 @@ export const Header = () => {
               </Link>
             </li>
             <li className={`${s.nav_links} li`}>
-              <Link href="contact">
+              <Link href="/contact">
                 <a>Kontakta Mig</a>
               </Link>
             </li>

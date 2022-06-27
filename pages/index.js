@@ -14,7 +14,7 @@ export default function Home({ posts }) {
             <article className="container">
               <h1 className="linearGradient">Features blog post</h1>
               <ul className={s.grid}>
-                {posts.slice(0, 3)?.map((o) => (
+                {posts?.slice(0, 3)?.map((o) => (
                   <Blogpost
                     key={o.id}
                     image={o.image}
