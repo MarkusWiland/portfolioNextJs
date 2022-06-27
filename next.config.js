@@ -5,7 +5,7 @@ const nextConfig = {
 
 module.exports = {
   images: {
-    domains: ["images.unsplash.com", "viavzfdziwgbjvrkzhmz.supabase.co"],
+    domains: ["images.unsplash.com", process.env.NEXT_PUBLIC_SUPABASE_URL],
   },
   nextConfig,
 };
