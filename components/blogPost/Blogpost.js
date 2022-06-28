@@ -3,8 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import s from "@styles/Main.module.scss";
 export const Blogpost = ({ title, image, id, content }) => {
-  console.log(image);
-  console.log(title);
   return (
     <>
       <li>

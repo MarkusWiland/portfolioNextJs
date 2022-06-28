@@ -36,7 +36,6 @@ export async function getStaticProps() {
     .from("posts")
     .select("*")
     .order("created_at", { ascending: false });
-  console.log("data", data);
   return {
     props: {
       posts: data,

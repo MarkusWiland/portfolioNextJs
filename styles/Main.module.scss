@@ -64,3 +64,12 @@
     resize: none;
   }
 }
+
+.searchField{
+  padding: .75rem;
+  margin: 1rem 0rem;
+width: 100%;
+}
+.searchField:focus {
+  outline:none;
+}

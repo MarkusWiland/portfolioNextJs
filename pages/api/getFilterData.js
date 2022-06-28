@@ -1,7 +1,7 @@
-import { data } from "../../data";
+
 export default function handler(req, res) {
     const { method } = req;
     if (method === "GET") {
-      return res.status(200).json(data);
+      return res.status(200).json({name: 'hello'});
     }
 }

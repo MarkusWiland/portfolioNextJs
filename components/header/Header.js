@@ -23,7 +23,7 @@ export const Header = () => {
   return (
     <div className={`${s.headerSticky}`}>
       <header className={`${s.header} container`}>
-        <div>
+        <div className="absolut">
           {!user ? (
             <>
               <input
@@ -58,7 +58,7 @@ export const Header = () => {
               </Link>
             </li>
             <li className={`${s.nav_links} li`}>
-              <Link href="/blog">
+              <Link href="/blogg">
                 <a>Blogg</a>
               </Link>
             </li>

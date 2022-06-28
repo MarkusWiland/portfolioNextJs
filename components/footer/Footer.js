@@ -4,10 +4,26 @@ export const Footer = () => {
     <>
       <footer className={`${s.footer} container`}>
         <main className="layout">
-          <div>hej</div>
-          <p>heööp</p>
-          <div>test</div>
-          <p>lol</p>
+          <div className={s.footerFlex}>
+            <div>
+          <h3>Kontakt</h3>
+              <p>heööp</p>
+              <p>test</p>
+              <p>lol</p>
+            </div>
+            <div>
+            <h3>Kontakt</h3>
+              <p>heööp</p>
+              <p>test</p>
+              <p>lol</p>
+            </div>
+            <div>
+            <h3>Kontakt</h3>
+              <p>heööp</p>
+              <p>test</p>
+              <p>lol</p>
+            </div>
+          </div>
         </main>
       </footer>
     </>
