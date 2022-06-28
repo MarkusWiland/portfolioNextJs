@@ -30,10 +30,25 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    "/blog/[id]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/blog/[id].js"
+=======
+    "/about": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/about.js"
+    ],
+>>>>>>> 18000f607be1a12e0503a455e3cd172baa4d17df
     "/projects": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/projects.js"
+>>>>>>> 2cbb3d6b795183dcdbd860735d187a66c6e48ed9
     ]
   },
   "ampFirstPages": []
