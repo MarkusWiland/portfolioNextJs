@@ -10,7 +10,7 @@ export default function Home({ posts }) {
         <Headseo title="Markus Wiland" description="" content="" />
         <main className={s.main}>
           <Hero />
-          <section className="section">
+          <section className="section" id="intro">
             <artice className="container">
               <div className={s.way}>
                 <div>

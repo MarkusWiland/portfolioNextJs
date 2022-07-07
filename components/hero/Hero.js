@@ -1,12 +1,12 @@
 import { Button } from "@components/index";
-
+import { FaArrowDown } from "react-icons/fa";
 import s from "./Hero.module.scss";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import Tooltip from "@components/tooltip/Tooltip";
 export const Hero = () => {
   return (
     <section className={`${s.main} section`}>
-      <div className={s.hero}>
+      <article className={s.hero}>
         <h1>
           Jag heter <span className="linearGradient">Markus Wiland</span>
         </h1>
@@ -48,7 +48,10 @@ export const Hero = () => {
             <FaGithub size={30} color="#171515" />
           </a>
         </div>
-      </div>
+      </article>
+      <a className={s.btnAbsolute} href="/#intro">
+        <FaArrowDown size={30} />
+      </a>
     </section>
   );
 };

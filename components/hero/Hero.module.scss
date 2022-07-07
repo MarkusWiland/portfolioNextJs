@@ -72,3 +72,12 @@
     font-size: 3rem;
   }
 }
+
+.btnAbsolute {
+  position: absolute;
+  margin-bottom: 2rem;
+  bottom: 0;
+  left: 50%;
+  color: black;
+  transform: translateX(-50%);
+}
