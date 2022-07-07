@@ -1,0 +1,23 @@
+@import "../../styles/base";
+.blogPostDate {
+  font-size: small;
+  color: lightgray;
+  padding: 0.2rem 0rem;
+}
+.blogPostSub {
+  font-size: smaller;
+  font-weight: bold;
+  padding: 0.2rem 0rem;
+}
+.blogPostsInfo {
+  padding: 1rem;
+  h3 {
+    font-weight: 700;
+    cursor: pointer;
+    color: $text-primaryDark;
+    transition: all 0.3s ease-in-out;
+  }
+  h3:hover {
+    color: gray;
+  }
+}

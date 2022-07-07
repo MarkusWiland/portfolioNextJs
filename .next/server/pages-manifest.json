@@ -1,14 +1,8 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-<<<<<<< HEAD
-  "/_document": "pages/_document.js"
-=======
   "/_document": "pages/_document.js",
-<<<<<<< HEAD
-  "/blog/[id]": "pages/blog/[id].js"
-=======
-  "/": "pages/index.js"
->>>>>>> 2cbb3d6b795183dcdbd860735d187a66c6e48ed9
->>>>>>> 18000f607be1a12e0503a455e3cd172baa4d17df
+  "/": "pages/index.js",
+  "/projects": "pages/projects.js",
+  "/blogg": "pages/blogg.js"
 }
