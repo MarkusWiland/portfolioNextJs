@@ -1,11 +1,11 @@
 import s from "./Header.module.scss";
-import { useEffect } from "react";
+
 import { useRouter } from "next/router";
 import { toast } from "react-toastify";
 import Link from "next/link";
 import { useAuth } from "@components/auth/Auth";
 import { useState } from "react";
-import { Button } from "antd";
+
 import Modal from "react-modal";
 import { FiLogIn, FiSun, FiMoon } from "react-icons/fi";
 const customStyles = {
