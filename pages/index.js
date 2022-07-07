@@ -11,14 +11,32 @@ export default function Home({ posts }) {
         <main className={s.main}>
           <Hero />
           <section className="section">
+            <artice className="container">
+              <div className={s.way}>
+                <div>
+                  <h3>Infomration</h3>
+                  <p>
+                    lorem asdasdas asdad qwe qwr fbwo 9pfhaosfih asiloiweg
+                    weugiyhw iouegdjfhsdfoiua gf
+                  </p>
+                </div>
+                <div>
+                  <p>ttext</p>
+                </div>
+              </div>
+            </artice>
+          </section>
+          <section className="section">
             <article className="container">
-              <h1 className="linearGradient">Features blog post</h1>
+              <h1 className="linearGradient">Senaste blogginlägg</h1>
               <ul className={s.grid}>
                 {posts?.slice(0, 3)?.map((o) => (
                   <Blogpost
                     key={o.id}
+                    createdAt={o.created_at}
                     image={o.image}
                     id={o.id}
+                    sub={o.sub}
                     content={o.content}
                     title={o.title}
                   />

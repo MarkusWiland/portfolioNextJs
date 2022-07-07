@@ -3,10 +3,11 @@
   max-width: $pageWidth-lg;
   width: 100%;
   margin: 0 auto;
+  border-top: 1px solid gray;
   padding: 1rem 0rem;
 }
 
-.footerFlex{
+.footerFlex {
   display: flex;
   width: 100%;
   justify-content: space-between;

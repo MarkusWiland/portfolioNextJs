@@ -5,6 +5,7 @@ export const AuthContext = createContext();
 export const AuthProvider = ({ supabaseAdmin, ...props }) => {
   const [session, setSession] = useState(null);
   const [user, setUser] = useState(null);
+
   useEffect(() => {
     const activeSession = supabaseAdmin.auth.session();
     setSession(activeSession);
@@ -14,6 +15,12 @@ export const AuthProvider = ({ supabaseAdmin, ...props }) => {
       (event, currentSession) => {
         setSession(currentSession);
         setUser(currentSession?.user ?? null);
+        fetch("/api/auth", {
+          method: "POST",
+          headers: new Headers({ "Content-Type": "application/json" }),
+          credentials: "same-origin",
+          body: JSON.stringify({ event, session: currentSession }),
+        }).then((res) => res.json());
       }
     );
 
@@ -35,6 +42,9 @@ export const AuthProvider = ({ supabaseAdmin, ...props }) => {
 
 export const useAuth = () => {
   const context = useContext(AuthContext);
+  if (context === null) {
+    return { redirectTo: "" };
+  }
   if (context === undefined) {
     throw new Error("useAuth must be used within an AuthProvider");
   }

@@ -1,3 +1,5 @@
+import { Layout } from "@components/index";
+import Image from "next/image";
 import React from "react";
 
 import { supabaseAdmin } from "../../utils/supabaseClient";
@@ -6,22 +8,32 @@ const post = ({ data }) => {
     data[0];
 
   return (
-    <>
-      <div>{id}</div>
-      <div>
-        {new Date(created_at).toLocaleDateString("se-SV", {
-          weekday: "long",
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-        })}
-      </div>
-      <div>{title}</div>
-      <div>{sub}</div>
-      <div>{content}</div>
-      <div>{user_id}</div>
-      <div>{email}</div>
-    </>
+    <Layout>
+      <section className="section">
+        <Image
+          src={`${process.env.NEXT_PUBLIC_SUPABASE_IMAGE}${image}`}
+          width={1100}
+          height={400}
+          objectFit="cover"
+          objectPosition="center"
+          alt="text"
+        />
+        <h1>{title}</h1>
+        <p>
+          {new Date(created_at).toLocaleDateString("sv-SE", {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })}
+        </p>
+
+        <p>{sub}</p>
+        <p>{content}</p>
+        <p>{user_id}</p>
+        <p>{email}</p>
+      </section>
+    </Layout>
   );
 };
 

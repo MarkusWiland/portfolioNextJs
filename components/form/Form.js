@@ -1,22 +1,16 @@
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import s from "@styles/Main.module.scss";
-import { supabaseAdmin, supabase } from "../../utils/supabaseClient";
+import { supabaseAdmin } from "../../utils/supabaseClient";
 import { useAuth } from "@components/auth/Auth";
 
 export const Form = () => {
-<<<<<<< HEAD
-  const { user, signOut } = useAuth();
-  const { register, handleSubmit, reset } = useForm();
-  const onSubmit = async (post) => {
-=======
   const { user } = useAuth();
 
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = async (post) => {
     console.log(user.id);
     console.log(user.email);
->>>>>>> 18000f607be1a12e0503a455e3cd172baa4d17df
     try {
       await supabaseAdmin.storage
         .from("images")
@@ -26,13 +20,8 @@ export const Form = () => {
         {
           title: post.title,
           sub: post.sub,
-<<<<<<< HEAD
-            user_id: user.id,
-            email: user.email,
-=======
-          email: user.email,
           user_id: user.id,
->>>>>>> 18000f607be1a12e0503a455e3cd172baa4d17df
+          email: user.email,
           content: post.content,
           image: post.file[0].name,
         },
@@ -55,19 +44,19 @@ export const Form = () => {
         <label>Titel</label>
         <input
           placeholder="Skriv en titel..."
-          {...register("title", { required: true, maxLength: 20 })}
+          {...register("title", { required: true, maxLength: 50 })}
         />
         <label>Välj en bild</label>
         <input {...register("file")} type="file" name="file" />
         <label>Skriv en sub mening</label>
         <textarea
           placeholder="Skriv en sub..."
-          {...register("sub", { pattern: /^[A-Za-z]+$/i })}
+          {...register("sub", { required: true })}
         />
         <label>Meddelande</label>
         <textarea
           placeholder="Skriv ett meddelande..."
-          {...register("content")}
+          {...register("content", { required: true })}
         />
 
         <button type="submit">Skicka</button>
