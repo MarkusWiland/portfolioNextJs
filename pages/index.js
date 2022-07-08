@@ -4,6 +4,7 @@ import s from "@styles/Main.module.scss";
 
 import { supabaseAdmin } from "../utils/supabaseClient";
 export default function Home({ posts }) {
+
   return (
     <>
       <Layout>

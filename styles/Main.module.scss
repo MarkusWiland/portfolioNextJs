@@ -101,7 +101,10 @@
 .way {
   display: flex;
   width: 100%;
+  justify-content:center;
+  align-items:center;
 }
 .way > div {
   width: 50%;
+
 }

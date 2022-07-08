@@ -49,8 +49,21 @@
 }
 .hero_socialIcons {
   display: flex;
+  align-items: center;
   margin-top: 2rem;
   gap: 1rem;
+}
+.hero_socialIcons a {
+  display: flex;
+  align-items: center;
+  color: gray;
+  transition: all .2s ease-in-out;
+}
+.hero_socialIcons a:hover {
+  color: white;
+}
+.hero_socialIcons > a > span {
+  margin-left: .3rem;
 }
 
 .sectionHero {
