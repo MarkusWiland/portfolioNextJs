@@ -50,7 +50,7 @@ export const Hero = () => {
         </div>
       </article>
       <a className={s.btnAbsolute} href="/#intro">
-        <FaArrowDown size={30} />
+        <FaArrowDown size={30} className={s.animateBounce}/>
       </a>
     </section>
   );
