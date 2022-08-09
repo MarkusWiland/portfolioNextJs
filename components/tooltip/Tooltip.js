@@ -10,7 +10,7 @@ export default function Tooltip({ content, children }) {
       portalClassName={s.tooltip}
       hideArrow={true}
     >
-      <span style={{ borderBottom: "3px dotted gray" }}>{children}</span>
+      <span style={{ borderBottom: "1px dotted gray" }}>{children}</span>
     </TippyTooltip>
   );
 }

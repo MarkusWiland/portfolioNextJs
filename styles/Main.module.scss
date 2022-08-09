@@ -16,7 +16,7 @@
 
 .grid li {
   list-style: none;
-  border-radius: 5px;
+  border-radius: 4px;
   border: 1px solid lightgray;
 }
 .grid li:hover {
@@ -29,6 +29,7 @@
   position: relative;
   & img {
     object-position: center;
+    border-radius: 4px;
   }
 }
 
@@ -100,7 +101,10 @@
 .way {
   display: flex;
   width: 100%;
+  justify-content:center;
+  align-items:center;
 }
 .way > div {
   width: 50%;
+
 }

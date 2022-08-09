@@ -49,8 +49,21 @@
 }
 .hero_socialIcons {
   display: flex;
+  align-items: center;
   margin-top: 2rem;
   gap: 1rem;
+}
+.hero_socialIcons a {
+  display: flex;
+  align-items: center;
+  color: gray;
+  transition: all .2s ease-in-out;
+}
+.hero_socialIcons a:hover {
+  color: white;
+}
+.hero_socialIcons > a > span {
+  margin-left: .3rem;
 }
 
 .sectionHero {
@@ -78,6 +91,15 @@
   margin-bottom: 1rem;
   bottom: 0;
   left: 50%;
-  color: black;
+  color: white;
   transform: translateX(-50%);
+}
+.animateBounce {
+  -webkit-animation: bounce 1s infinite;
+  animation: bounce 1s infinite;
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
 }

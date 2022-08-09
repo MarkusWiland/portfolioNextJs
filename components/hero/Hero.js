@@ -1,7 +1,7 @@
 import { Button } from "@components/index";
 import { FaArrowDown } from "react-icons/fa";
 import s from "./Hero.module.scss";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 import Tooltip from "@components/tooltip/Tooltip";
 export const Hero = () => {
   return (
@@ -41,16 +41,29 @@ export const Hero = () => {
           />
         </div>
         <div className={s.hero_socialIcons}>
-          <a href="#">
-            <FaLinkedin size={30} color="#0A66C2" />
+        <a href="#">
+            <FaTwitter size={20}  />
+            <span>
+              @MarkusWiland
+            </span>
           </a>
           <a href="#">
-            <FaGithub size={30} color="#171515" />
+            <FaLinkedin size={20} />
+            <span>
+              @MarkusWiland
+            </span>
+          </a>
+          <a href="#">
+            <FaGithub size={20}  /> 
+            <span>
+              @MarkusWiland
+            </span>
           </a>
         </div>
       </article>
       <a className={s.btnAbsolute} href="/#intro">
-        <FaArrowDown size={30} />
+        
+        <FaArrowDown size={30} className={s.animateBounce}/>
       </a>
     </section>
   );

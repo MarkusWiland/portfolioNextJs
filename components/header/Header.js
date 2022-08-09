@@ -72,7 +72,7 @@ export const Header = () => {
         <div className={s.absolut}>
           {!user ? (
             <button onClick={openModal}>
-              <FiLogIn size={25} />
+              <FiLogIn size={20} />
             </button>
           ) : (
             <>
@@ -172,7 +172,7 @@ export const Header = () => {
         </nav>
         <span className={s.nightMode}>
           {" "}
-          {true ? <FiSun size={25} /> : <FiMoon size={25} />}
+          {true ? <FiSun size={20} /> : <FiMoon size={20} />}
         </span>
       </header>
     </div>
