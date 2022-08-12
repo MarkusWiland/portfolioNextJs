@@ -3,6 +3,7 @@
 html,
 body {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -22,8 +23,17 @@ a {
   margin: 0;
 }
 /* container design på en max-width */
+@media screen and (max-width: 968px) {
+  .container {
+    max-width: 100%;
+    padding: 0rem 1rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
 .container {
   max-width: $pageWidth-lg;
+
   width: 100%;
   margin: 0 auto;
 }

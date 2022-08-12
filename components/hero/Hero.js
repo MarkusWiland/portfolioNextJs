@@ -8,7 +8,8 @@ export const Hero = () => {
     <section className={`${s.main} section`}>
       <article className={s.hero}>
         <h1>
-          Jag heter <span className="linearGradient">Markus Wiland</span>
+          Hej, <br /> Jag heter{" "}
+          <span className="linearGradient">Markus Wiland</span>
         </h1>
         <span>
           Jag är en Front-End utvecklare som jobbar idag hos{" "}
@@ -41,29 +42,22 @@ export const Hero = () => {
           />
         </div>
         <div className={s.hero_socialIcons}>
-        <a href="#">
-            <FaTwitter size={20}  />
-            <span>
-              @MarkusWiland
-            </span>
+          <a href="#">
+            <FaTwitter size={20} />
+            <span>@MarkusWiland</span>
           </a>
           <a href="#">
             <FaLinkedin size={20} />
-            <span>
-              @MarkusWiland
-            </span>
+            <span>@MarkusWiland</span>
           </a>
           <a href="#">
-            <FaGithub size={20}  /> 
-            <span>
-              @MarkusWiland
-            </span>
+            <FaGithub size={20} />
+            <span>@MarkusWiland</span>
           </a>
         </div>
       </article>
       <a className={s.btnAbsolute} href="/#intro">
-        
-        <FaArrowDown size={30} className={s.animateBounce}/>
+        <FaArrowDown size={30} className={s.animateBounce} />
       </a>
     </section>
   );

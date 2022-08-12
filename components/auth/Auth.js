@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-
+import Router from "next/router";
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ supabaseAdmin, ...props }) => {
@@ -33,7 +33,9 @@ export const AuthProvider = ({ supabaseAdmin, ...props }) => {
       value={{
         session,
         user,
-        signOut: () => supabaseAdmin.auth.signOut(),
+        signOut: () => {
+          supabaseAdmin.auth.signOut(), Router.push("/");
+        },
       }}
       {...props}
     />
