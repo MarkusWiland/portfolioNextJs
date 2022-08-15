@@ -7,38 +7,15 @@
 }
 
 /* detta är till en egen komponent sen */
-@media screen and (max-width: 600px) {
-  .grid {
-    display: grid;
-    gap: 1rem;
-    padding-top: 1rem;
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .grid li {
-    list-style: none;
-    border-radius: 4px;
-    border: 1px solid lightgray;
-  }
-}
-@media screen and (max-width: 992px) {
-  .grid {
-    display: grid;
-    gap: 1rem;
-    padding-top: 1rem;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .grid li {
-    list-style: none;
-    border-radius: 4px;
-    border: 1px solid lightgray;
-  }
-}
 
 .grid {
   display: grid;
   gap: 1rem;
   padding-top: 1rem;
-  grid-template-columns: repeat(3, 1fr);
+
+  @media only screen and (max-width: 600px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .grid li {
