@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import Link from "next/link";
 import { useAuth } from "@components/auth/Auth";
 import { useState } from "react";
-
+import { useTheme } from "next-themes";
 import Modal from "react-modal";
 import { FiLogIn, FiSun, FiMoon } from "react-icons/fi";
 const customStyles = {
@@ -26,6 +26,7 @@ const customStyles = {
 
 import { supabase } from "../../utils/supabaseClient";
 export const Header = () => {
+  const { theme, setTheme } = useTheme();
   Modal.setAppElement("body");
   const router = useRouter();
   console.log(router.pathname);
@@ -68,6 +69,8 @@ export const Header = () => {
   };
   return (
     <div className={`${s.headerSticky}`}>
+      <button onClick={() => setTheme("light")}>Light Mode</button>
+      <button onClick={() => setTheme("dark")}>Dark Mode</button>
       <header className={`${s.header} container`}>
         <div className={s.absolut}>
           {!user ? (
@@ -123,7 +126,7 @@ export const Header = () => {
           </>
         </Modal>
 
-        <span>Markus Wiland</span>
+        <span className={s.logoName}>Markus Wiland</span>
 
         <nav className={s.nav}>
           <ul className={`${s.nav_links}`}>

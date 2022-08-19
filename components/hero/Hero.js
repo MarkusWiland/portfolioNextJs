@@ -30,16 +30,12 @@ export const Hero = () => {
         <div className={s.hero_buttonsContainer}>
           <Button
             text="Läs min blogg"
-            color="--text-primaryDark"
+            color="--btn"
             backgroundShadow="true"
             href="blogg"
           />
 
-          <Button
-            text="Läs mer om mig"
-            color="--text-primaryDark"
-            href="about"
-          />
+          <Button text="Läs mer om mig" color="--btn" href="about" />
         </div>
         <div className={s.hero_socialIcons}>
           <a href="#">

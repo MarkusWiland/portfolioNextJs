@@ -1,9 +1,13 @@
 $text-primaryLight: #1f1f1f;
 $text-primaryLightHover: #1494a8;
-$text-primaryDark: rgb(209 213 219);
-$text-primaryDarkHover: #069467;
+$backgroundLightMode-color: #dadada;
 $text-secondaryLight: #949494;
+
+$text-primaryDarkHover: #069467;
 $text-secondaryDark: #efefef;
-$backgroundLightMode-color: #2b2d3b;
+$text-primaryDark: rgb(209 213 219);
 $backgroundDarkMode-color: rgba(34, 34, 34);
 $backgroundDarkModeHover-color: rgb(49, 49, 49);
+
+$--bg: $backgroundDarkMode-color;
+$--text: $text-primaryDark;

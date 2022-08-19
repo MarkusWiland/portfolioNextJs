@@ -64,7 +64,7 @@
 .hero_socialIcons a {
   display: flex;
   align-items: center;
-  color: gray;
+  color: var(--btn);
   transition: all 0.2s ease-in-out;
 }
 .hero_socialIcons a:hover {

@@ -1,18 +1,47 @@
 @import "base";
-
+:root {
+  //COLORS
+  --bgColor: #222222;
+  --text: #dfeeee;
+  --btn: #3a8a8d;
+  //FONT SIZES
+  --fs-sm: 12px;
+  --fs-md: 16px;
+  --fs-lg: 20px;
+}
 html,
 body {
   scroll-behavior: smooth;
+  transition: background 1s;
   scroll-padding-top: 80px;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: $backgroundDarkMode-color;
-  color: $text-primaryDark;
-  font-size: $fontSize;
+  background-color: var(--bgColor);
+  color: var(--text);
+  @media only screen and (max-width: 600px) {
+    font-size: var(--fs-sm);
+  }
+  @media only screen and (min-width: 768px) {
+    font-size: var(--fs-sm);
+  }
+  @media only screen and (min-width: 992px) {
+    font-size: var(--fs-md);
+  }
 }
 
+html[data-theme="light"] {
+  --bgColor: #ffffff;
+  --btn: #000000;
+  --text: #000000;
+}
+
+html[data-theme="dark"] {
+  --bgColor: rgba(34, 34, 34);
+  --btn: #3a8a8d;
+  --text: #dfeeee;
+}
 a {
   text-decoration: none;
 }
